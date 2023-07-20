@@ -2,7 +2,7 @@
 
 {% block content %}
 <h1>Todo: </h1>
-{% for task in djangoapp_list %}
-<p><a href="{% url 'djangoApp_detail' task.pk %}">{{ task.title }}</a></p>
+{% for djangoapp in djangoapp_list %}
+<p><a href="{% url 'djangoApp_detail' djangoapp.pk %}">{{ djangoapp.title }}</a></p>
 {% endfor %}
 {% endblock content %}
