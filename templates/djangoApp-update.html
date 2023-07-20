@@ -2,6 +2,7 @@
 
 {% block content %}
 <h1>Update Task</h1>
+<p> {{task.id}} </p>
 <form action="" method="POST">
   {% csrf_token %}
   {{ form.as_p }}

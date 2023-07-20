@@ -1,10 +1,10 @@
 {% extends '_base.html' %}
 
 {% block content %}
-<h1>Title: {{ djangoApp.title }}</h1>
-<p>Description: {{ djangoApp.body }}</p>
-<p>Author: {{ djangoApp.author }}
-<p class="button"><a href="{% url 'djangoApp_update' djangoApp.pk %}">Update Task</a></p>
-<p class="button"><a href="{% url 'djangoApp_delete' djangoApp.pk %}">Delete Task</a></p>
+<h1>Title: {{ task.title }}</h1>
+<p>Description: {{ task.body }}</p>
+<p>Author: {{ task.author }}</p>
+<p class="button"><a href="{% url 'djangoApp_update' task.pk %}">Update Task</a></p>
+<p class="button"><a href="{% url 'djangoApp_delete' task.pk %}">Delete Task</a></p>
 
 {% endblock content %}

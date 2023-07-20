@@ -4,7 +4,7 @@ from django.urls import reverse
 
 class DjangoApp(models.Model):
   title = models.CharField(max_length=255)
-  body = models.TextField()
+  body = models.TextField(default='1. #Todo goes here')
   author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
   
   def __str__(self):
